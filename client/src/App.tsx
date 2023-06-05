@@ -1,9 +1,17 @@
+import { Route, Routes } from 'react-router';
 import './App.css';
+import Layout from './Components/Layout';
+import Home from './Pages/Home';
 
 function App() {
+
+
   return (
-    <div className="App">
-    </div>
+    <Routes>
+      <Route path='/' element={<Layout/>}>
+        <Route index element={<Home/>}/>
+      </Route>
+    </Routes>
   );
 }
 
